@@ -94,16 +94,12 @@ export async function POST(request: Request) {
     lastValidBlockHeight: blockhash.lastValidBlockHeight,
   }).add(instruction);
 
-  console.log(transaction);
-
   const response = await createPostResponse({
     fields: {
       transaction: transaction,
       type: 'transaction',
     },
   });
-
-  console.log(response);
 
   return Response.json(response, { headers: ACTIONS_CORS_HEADERS });
 }

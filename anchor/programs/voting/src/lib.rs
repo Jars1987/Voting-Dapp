@@ -2,7 +2,7 @@
 
 use anchor_lang::prelude::*;
 
-declare_id!("XNqL6DbUyCNZcjWLcANkT6aNR2T3xM6EYZirSekUfba");
+declare_id!("5Gcak1bL4fx81gk9nPcHidBG7r6TPPFQckcd3ZEmBMsU");
 
 #[program]
 pub mod voting {
@@ -41,6 +41,8 @@ pub mod voting {
    pub fn vote (context: Context<Vote>, _candidate_name: String, _poll_id: u64) -> Result<()> {
     let candidate = &mut context.accounts.candidate;
     candidate.candidate_votes += 1;
+    msg!("Voted for candidate: {}", candidate.candidate_name);
+    msg!("Votes: {}", candidate.candidate_votes);
     Ok(())
    }
 }

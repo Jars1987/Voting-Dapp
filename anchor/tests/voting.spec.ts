@@ -7,7 +7,7 @@ import { BankrunProvider, startAnchor } from 'anchor-bankrun';
 const IDL = require('../target/idl/voting.json');
 
 const votingAdress = new PublicKey(
-  'XNqL6DbUyCNZcjWLcANkT6aNR2T3xM6EYZirSekUfba'
+  '5Gcak1bL4fx81gk9nPcHidBG7r6TPPFQckcd3ZEmBMsU'
 );
 
 describe('Voting', () => {
